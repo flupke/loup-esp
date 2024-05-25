@@ -3,6 +3,8 @@ use esp_idf_hal::peripherals::Peripherals;
 use esp_idf_hal::prelude::*;
 use esp_idf_hal::sys::EspError;
 
+use crate::utils::map;
+
 #[allow(dead_code)]
 pub enum DataPort {
     D0,
@@ -56,8 +58,4 @@ impl Servo {
         self.driver
             .set_duty(map(angle, 0, 180, self.min_limit, self.max_limit))
     }
-}
-
-fn map(x: u32, in_min: u32, in_max: u32, out_min: u32, out_max: u32) -> u32 {
-    (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 }
