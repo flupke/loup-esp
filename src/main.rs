@@ -28,7 +28,7 @@ fn run_app() -> Result<(), EspError> {
             }
             Err(error) => log::error!("Error reading DMX data: {:?}", error),
         }
-        FreeRtos::delay_ms(500);
+        FreeRtos::delay_ms(1000);
     }
 
     /*

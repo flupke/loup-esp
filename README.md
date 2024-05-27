@@ -1,5 +1,28 @@
 # Tetes de loup
 
+## Installation
+
+1. Install system dependencies:
+   - `espflash`
+   - `ldproxy`
+1. Install espup
+
+   ```bash
+   cargo install espup
+   ```
+
+1. Install the Espressif ecosystem
+
+   ```bash
+   espup install
+   ```
+
+1. Build and flash the firmware
+
+   ```bash
+   cargo run
+   ```
+
 ## Resources
 
 Schematics:
